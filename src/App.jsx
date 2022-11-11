@@ -5,12 +5,21 @@ import QuizBar from './components/QuizBar';
 class App extends Component {
   constructor(){
     super();
+    this.state = {
+      cardStyle: "Random"
+    }
+  }
+
+  userChoice = (cardStyle)=>{
+    this.setState({
+      cardStyle //cardStyle: cardStyle
+    })
   }
 
   render(){
     return (
       <div className="App">
-        <QuizBar />
+        <QuizBar userChoice={this.userChoice}/>
       </div>
     )
   }
