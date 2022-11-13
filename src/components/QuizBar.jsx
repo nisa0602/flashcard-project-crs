@@ -10,7 +10,7 @@ export default function QuizBar(props) {
 
     const quizType = quizArr.map((qt, i) => {
         return(
-            <QuizType key={i} icon={qt.icon} quizType={qt.map} userChoice={props.userChoice} />
+            <QuizType key={i} icon={qt.icon} quizType={qt.type} userChoice={props.userChoice} />
         )
     })
     return(
